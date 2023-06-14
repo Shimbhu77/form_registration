@@ -30,6 +30,24 @@ The registration form applies the following validations:
 - Gender: Must be selected (either male or female).
 - Date of Birth: Must be older than 14 years.
 
+**Configure Database URL using .env File**
+
+To configure the database URL for the registration form application, you can make use of the .env file. The .env file allows you to store sensitive information such as the database URL securely.
+
+1. Create a new file in the root directory of your application and name it ".env".
+
+2. Inside the .env file, add the following line:
+
+   ```
+   SERVER_PATH=<your-database-url>
+   ```
+
+   Replace `<your-database-url>` with the actual URL of your MongoDB database.
+
+3. Save the .env file.
+
+4. In your application code, you can access the database URL using the `process.env.SERVER_PATH` variable.
+
 ### Functionality
 
 Upon filling in the registration form and clicking the Save button, the entered information will be stored in the database. The data will be associated with a unique identifier and can be retrieved for future use.
